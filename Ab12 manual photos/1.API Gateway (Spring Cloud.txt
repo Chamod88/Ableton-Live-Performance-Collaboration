@@ -1,0 +1,28 @@
+1.API Gateway (Spring Cloud
+
+Routing . Rate Limiting -
+JWT Validation
+
+2.Payment Service\nStripe
+Integration, Charges,
+Refunds\nPostgreSQL :8082
+
+3.Fraud EngineinML Scoring,
+Rule FalibackinRedis +
+PostgreSQL :8083
+
+4.Reconciliation
+Service\nSettlement
+Matching,
+Reporting'inPostgreSQL
+:8085
+
+5.Notification
+Service\nEmail/SMS
+Alerts\nPostgreSQL :8084
+
+6.User ServicenRegistration,
+Auth, RBACInPostgreSQL
+-8081
+
+7.Webhook -> Stripe API (External Service)

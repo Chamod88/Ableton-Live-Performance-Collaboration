@@ -1,0 +1,34 @@
+[workspace]
+resolver = "2"
+members = [
+    "shared",
+    "relay",
+    "daemon",
+]
+
+[workspace.dependencies]
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# Async stream utilities (for iroh's Accept stream)
+futures-util = "0.3"
+
+# P2P networking — handles NAT traversal, hole punching, encrypted direct connections
+iroh = { version = "1.4" }
+
+# CRDT — merges concurrent edits, per-user undo
+loro = { version = "1" }
+
+# Serialization — tight binary encoding for the message envelope
+serde = { version = "1", features = ["derive"] }
+postcard = { version = "1", features = ["alloc"] }
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Error handling
+anyhow = "1"
+
+# Unique IDs
+uuid = { version = "1", features = ["v4", "serde"] }
